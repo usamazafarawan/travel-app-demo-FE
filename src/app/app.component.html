@@ -1,39 +1,134 @@
-
 <div class="bg-container">
-  <!-- Background -->
-  <div class="overlay"></div>
+    <div class="overlay"></div>
 
-  <!-- Bootstrap Modal -->
-  <div
-    class="modal fade show"
-    id="exampleModal"
-    tabindex="-1"
-    aria-labelledby="exampleModalLabel"
-    aria-modal="true"
-    role="dialog"
-    style="display: block;"
-  >
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Popup Title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <!-- Bootstrap Modal -->
+    <div class="modal fade show" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-modal="true"
+        role="dialog" style="display: block;">
+        <div class="modal-dialog modal-dialog-centered custom-modal">
+            <div class="modal-content custom-modal-content">
+
+                <div class="container">
+                    <div class="d-flex flex-column detail-container">
+                        <div class="pasul">
+                            <div class="content">
+                                <p class="fw-semibold text-uppercase main-title">
+                                    PASUL 1
+                                </p>
+                                <p class="fw-bold sub-title">
+                                    Companioni de calatorie
+                                </p>
+                                <p class="text-content">
+                                    Cu cine calatoresti? Selecteaza o optiune
+                                </p>
+                                <div class="d-flex flex-row justify-content-between mt-1">
+                                    <div class="box d-flex align-items-center justify-content-between">
+                                        <span class="box-text">Singur/a</span>
+                                        <img src="../assets//icons/user.png" alt="User Icon" class="icon-image" />
+                                    </div>
+
+                                    <div class="box d-flex align-items-center justify-content-between">
+                                        <span class="box-text">In Cuplu</span>
+                                        <img src="../assets//icons/group-2.png" alt="User Icon" class="icon-image" />
+                                    </div>
+
+                                    <div class="box d-flex align-items-center justify-content-between">
+                                        <span class="box-text">In Grup</span>
+                                        <img src="../assets//icons/group-3.png" alt="User Icon" class="icon-image" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="pasul">
+                            <div class="content">
+
+                                <p class="fw-semibold text-uppercase main-title">
+                                    PASUL 2
+                                </p>
+
+                                <p class="fw-bold sub-title">
+                                    Mijloace de transport
+                                </p>
+
+                                <p class="text-content">
+                                    Cum vrei sa calatoresti? Selecteaza o optiune
+                                </p>
+
+
+                                <div class="d-flex flex-row justify-content-between mt-1">
+                                    <div class="travel-box">
+                                        <div class="text-content-travel">
+                                            <span class="box-text">Singur/a</span>
+                                            <span class="box-subtext">Iti oferim cele mai bune optiuni de zbor</span>
+                                        </div>
+                                        <img src="../assets/icons/aeroplane.png" alt="User Icon" class="icon-image" />
+                                    </div>
+
+                                    <div class="travel-box">
+                                        <div class="text-content-travel">
+                                            <span class="box-text">In Cuplu</span>
+                                            <span class="box-subtext">Folositi resursele proprii de calatorie</span>
+                                        </div>
+                                        <img src="../assets/icons/arrow.png" alt="User Icon" class="icon-image" />
+                                    </div>
+                                </div>
+
+
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="pasul">
+                            <div class="content">
+
+                                <p class="fw-semibold text-uppercase main-title">
+                                    PASUL 3
+                                </p>
+
+                                <p class="fw-bold sub-title">
+                                    Datele de calatorie
+                                </p>
+
+                                <p class="datele-text-content">
+                                    Cand vrei sa calatoresti?
+                                </p>
+                                <p class="sub-text-content">
+                                    Pentru aceasta destinatie Iti recomandam sa calatoresti in perioada (martie - mai)
+                                    sau (septembire - noiembrie).
+                                </p>
+
+
+                                <div class="d-flex flex-row justify-content-between mt-1">
+
+
+                                    <div class="box d-flex align-items-center justify-content-between">
+                                        <span class="calender-text">Selecteaza Check-in / Check-out</span>
+                                        <img src="../assets//icons/calendar.png" alt="User Icon"
+                                            class="calender-icon" />
+                                    </div>
+
+                                </div>
+
+
+
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="button-section">
+                            <button type="button" class="btn btn-primary continue-button">Genereaza itinerariul</button>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-          This popup is shown by default on page load, over the background image.
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
     </div>
-  </div>
 </div>
-
-
-
-
-
-
-<router-outlet></router-outlet>

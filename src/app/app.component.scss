@@ -1,15 +1,208 @@
 .bg-container {
-  position: relative;
-  height: 100vh;
-  background: url('../assets/images/payramid.png') no-repeat center center;
-  background-size: cover;
+    position: relative;
+    height: 100vh;
+    background: url("/assets/images/payramid.png") no-repeat center center;
+    background-size: cover;
 
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); // optional dark overlay
-  }
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* Custom modal styles */
+.custom-modal {
+    max-width: 1280px;
+    /* matches desired width */
+}
+
+.custom-modal-content {
+    width: 1280px;
+    height: auto;
+    border-radius: 20px;
+    border: 1px solid #fff;
+    opacity: 1;
+}
+
+.detail-container {
+    gap: 40px;
+
+    .pasul {
+        border-radius: 12px;
+        background-color: #f1f4f7;
+        border: 1px solid #ffc112;
+        padding: 10px;
+        margin-top: 5px;
+
+        .content {
+            padding: 7px;
+
+            .main-title {
+                color: #ffc112;
+                font-family: "roboto";
+                font-size: 20px;
+                line-height: 20px;
+                letter-spacing: 4%;
+            }
+
+            .sub-title {
+                color: #0f1d2d;
+                font-family: "roboto";
+                font-size: 28px;
+                line-height: 100%;
+            }
+
+            .text-content {
+                color: #3f4a57;
+                font-family: "Roboto", sans-serif;
+                font-weight: 400; // Regular
+                font-size: 20px;
+                line-height: 32px;
+                letter-spacing: 0;
+                font-style: normal; // "Regular" is equivalent to normal
+                margin-top: 40px;
+            }
+
+            .datele-text-content {
+                color: #3f4a57;
+                font-family: "Roboto", sans-serif;
+                font-weight: 500; // Medium
+                font-style: normal;
+                font-size: 24px;
+                line-height: 28px; // reduced (was 32px)
+                letter-spacing: 0;
+                margin-top: 40px;
+                margin-bottom: 2px; // small gap below
+            }
+
+            .sub-text-content {
+                font-family: "Roboto", sans-serif;
+                font-weight: 400; // Regular
+                font-style: normal;
+                font-size: 18px;
+                line-height: 24px; // tighter line height
+                letter-spacing: 0;
+                color: #3f4a57;
+            }
+
+            .box {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                width: 373px; // optional, since flex will handle sizing
+                height: 72px;
+                padding: 20px 30px;
+                margin: 0 5px;
+
+                background: #fff;
+                border: 1px solid #ffc112;
+                border-radius: 16px;
+
+                .box-text {
+                    font-family: "Roboto", sans-serif;
+                    font-weight: 600; // SemiBold
+                    font-size: 24px;
+                    line-height: 32px;
+                    letter-spacing: 0;
+                    font-style: normal; // "SemiBold" handled by font-weight
+                    color: #0f1d2d;
+                }
+
+                .calender-text {
+                    font-family: "Roboto", sans-serif;
+                    font-weight: 400; // Regular
+                    font-style: normal; // "Regular" in Figma = normal
+                    font-size: 18px;
+                    line-height: 20px;
+                    letter-spacing: 0;
+                    vertical-align: middle;
+                    color: #6f7781;
+                }
+
+                .calender-icon {
+                    width: 32px;
+                    height: 32px;
+                    margin-left: 10px;
+                    cursor: pointer;
+                }
+            }
+
+            .travel-box {
+                flex: 1;
+                display: flex;
+                align-items: center; // centers content vertically
+                justify-content: space-between; // keeps text left, icon right
+
+                //  width: 373px; // optional
+                // height: 72px;
+                padding: 20px 30px;
+                margin: 0 5px;
+
+                background: #fff;
+                border: 1px solid #ffc112;
+                border-radius: 16px;
+
+                .text-content-travel {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center; // vertical centering of both lines
+                }
+
+                .box-text {
+                    font-family: "Roboto", sans-serif;
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: #0f1d2d;
+                }
+
+                .box-subtext {
+                    font-family: "Roboto", sans-serif;
+                    font-weight: 400; // Regular
+                    font-style: normal; // "Regular" is handled by font-weight
+                    font-size: 18px;
+                    line-height: 32px; // vertical spacing between lines
+                    letter-spacing: 0; // 0% means no extra spacing
+                    color: #0f1d2d;
+                }
+
+                .icon-image {
+                    width: 32px;
+                    height: 32px;
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    .button-section {
+        display: flex;
+        justify-content: center; // center the button
+        width: 100%;
+    }
+
+    .continue-button {
+        width: 90%; // full width
+        background-color: #135699; // your custom color
+        color: #ffc112; // text color
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        border-radius: 12px;
+        border: 1px solid #ffc112; // remove default border
+        padding: 12px 20px; // adjust height nicely
+        margin-bottom: 50px; // ⬅️ extra space after button
+        margin-top: 50px; // ⬅️ extra space after button
+
+        &:hover {
+            background-color: darken(#135699, 5%); // slightly darker on hover
+            color: #ffc112;
+        }
+    }
 }

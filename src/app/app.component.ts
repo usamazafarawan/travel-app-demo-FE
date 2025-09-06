@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'travel-app-demo';
+  selectedOption: string = ''; // default nothing selected
+  selectedTransportOption: string = ''; // default nothing selected
+
+
+  setOption(option: string) {
+    this.selectedOption = option;
+  }
+
+  setTransportOption(option: string) {
+    this.selectedTransportOption = option;
+  }
 }

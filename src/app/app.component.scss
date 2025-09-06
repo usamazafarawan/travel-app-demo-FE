@@ -17,7 +17,6 @@
 /* Custom modal styles */
 .custom-modal {
     max-width: 1280px;
-    /* matches desired width */
 }
 
 .custom-modal-content {
@@ -59,32 +58,32 @@
             .text-content {
                 color: #3f4a57;
                 font-family: "Roboto", sans-serif;
-                font-weight: 400; // Regular
+                font-weight: 400;
                 font-size: 20px;
                 line-height: 32px;
                 letter-spacing: 0;
-                font-style: normal; // "Regular" is equivalent to normal
+                font-style: normal;
                 margin-top: 40px;
             }
 
             .datele-text-content {
                 color: #3f4a57;
                 font-family: "Roboto", sans-serif;
-                font-weight: 500; // Medium
+                font-weight: 500;
                 font-style: normal;
                 font-size: 24px;
-                line-height: 28px; // reduced (was 32px)
+                line-height: 28px;
                 letter-spacing: 0;
                 margin-top: 40px;
-                margin-bottom: 2px; // small gap below
+                margin-bottom: 2px;
             }
 
             .sub-text-content {
                 font-family: "Roboto", sans-serif;
-                font-weight: 400; // Regular
+                font-weight: 400;
                 font-style: normal;
                 font-size: 18px;
-                line-height: 24px; // tighter line height
+                line-height: 24px;
                 letter-spacing: 0;
                 color: #3f4a57;
             }
@@ -95,7 +94,7 @@
                 align-items: center;
                 justify-content: space-between;
 
-                width: 373px; // optional, since flex will handle sizing
+                width: 373px;
                 height: 72px;
                 padding: 20px 30px;
                 margin: 0 5px;
@@ -103,21 +102,23 @@
                 background: #fff;
                 border: 1px solid #ffc112;
                 border-radius: 16px;
+                cursor: pointer;
+                transition: all 0.3s ease;
 
                 .box-text {
                     font-family: "Roboto", sans-serif;
-                    font-weight: 600; // SemiBold
+                    font-weight: 600;
                     font-size: 24px;
                     line-height: 32px;
                     letter-spacing: 0;
-                    font-style: normal; // "SemiBold" handled by font-weight
+                    font-style: normal;
                     color: #0f1d2d;
                 }
 
                 .calender-text {
                     font-family: "Roboto", sans-serif;
-                    font-weight: 400; // Regular
-                    font-style: normal; // "Regular" in Figma = normal
+                    font-weight: 400;
+                    font-style: normal;
                     font-size: 18px;
                     line-height: 20px;
                     letter-spacing: 0;
@@ -133,25 +134,30 @@
                 }
             }
 
+            .box.active {
+                border-color: #007bff;
+                background-color: #e6f0ff;
+                box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+            }
+
             .travel-box {
                 flex: 1;
                 display: flex;
-                align-items: center; // centers content vertically
-                justify-content: space-between; // keeps text left, icon right
+                align-items: center;
+                justify-content: space-between;
 
-                //  width: 373px; // optional
-                // height: 72px;
                 padding: 20px 30px;
                 margin: 0 5px;
 
                 background: #fff;
                 border: 1px solid #ffc112;
                 border-radius: 16px;
-
+                cursor: pointer;
+                transition: all 0.3s ease;
                 .text-content-travel {
                     display: flex;
                     flex-direction: column;
-                    justify-content: center; // vertical centering of both lines
+                    justify-content: center;
                 }
 
                 .box-text {
@@ -164,11 +170,11 @@
 
                 .box-subtext {
                     font-family: "Roboto", sans-serif;
-                    font-weight: 400; // Regular
-                    font-style: normal; // "Regular" is handled by font-weight
+                    font-weight: 400;
+                    font-style: normal;
                     font-size: 18px;
-                    line-height: 32px; // vertical spacing between lines
-                    letter-spacing: 0; // 0% means no extra spacing
+                    line-height: 32px;
+                    letter-spacing: 0;
                     color: #0f1d2d;
                 }
 
@@ -178,31 +184,44 @@
                     margin-left: 10px;
                 }
             }
+            .travel-box.active {
+                border-color: #007bff;
+                background-color: #e6f0ff;
+                box-shadow: 0 0 10px rgba(0, 123, 255, 0.4);
+            }
         }
     }
 
     .button-section {
         display: flex;
-        justify-content: center; // center the button
+        justify-content: center;
         width: 100%;
     }
 
     .continue-button {
-        width: 90%; // full width
-        background-color: #135699; // your custom color
-        color: #ffc112; // text color
+        width: 90%;
+        background-color: #135699;
+        color: #ffc112;
         font-family: "Roboto", sans-serif;
         font-size: 20px;
         font-weight: 700;
         border-radius: 12px;
-        border: 1px solid #ffc112; // remove default border
-        padding: 12px 20px; // adjust height nicely
-        margin-bottom: 50px; // ⬅️ extra space after button
-        margin-top: 50px; // ⬅️ extra space after button
+        border: 1px solid #ffc112;
+        padding: 12px 20px;
+        margin-bottom: 50px;
+        margin-top: 50px;
 
         &:hover {
-            background-color: darken(#135699, 5%); // slightly darker on hover
+            background-color: darken(#135699, 5%);
             color: #ffc112;
         }
+    }
+}
+
+@media (max-width: 650px) {
+    .cards {
+        flex-direction: column !important;
+        align-items: center;
+        gap: 20px;
     }
 }

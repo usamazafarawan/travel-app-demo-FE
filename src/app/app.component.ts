@@ -100,6 +100,7 @@ export class AppComponent {
 
       title: 'Egipt',
       description: 'Egiptul este situat in nord-estul Africii si este strabatut de fluviul Nil, sursa vietii de-a lungul mileniilor. Renumit pentru civilizatia sa antica, tara adaposteste comori legendare precum Piramidele, Valea Regilor si templele de la Luxor. De la deserturile spectaculoase si Marea Rosie pana la siturile arheologice unice si orasele pline de energie, Egiptul imbina traditia si modernitatea intr-o destinatie fascinanta pentru orice calator.',
+      mapImage:'../assets/images/map.png',
       bullets: [
         {
           icon: '../assets/icons/earth-globe.png',

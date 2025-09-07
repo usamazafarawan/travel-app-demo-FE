@@ -14,8 +14,10 @@
                     <div class="overlay"></div>
 
                     <!-- Close Icon -->
-                    <img class="hero-close" src="../assets/icons/close.png">
-
+<div class="hero-close-wrapper">
+        <img *ngIf="selectedCity?.mapImage" class="hero-info" [src]="selectedCity.mapImage" alt="Info">
+    <img  class="hero-close" src="../assets/icons/close.png" alt="Close">
+</div>
                     <!-- Text and images on left -->
                     <div class="hero-left-content">
                         <div class="hero-text">

@@ -26,6 +26,132 @@
     border: 1px solid #fff;
     opacity: 1;
 }
+.hero-section {
+    position: relative;
+    height: 800px;
+    background:
+        linear-gradient(
+            to right,
+            rgba(0, 0, 0, 0.7) 0%,
+            /* dark on left */ rgba(0, 0, 0, 0.1) 40%,
+            /* lighter in middle */ rgba(0, 0, 0, 0) 100% /* transparent (normal image) on right */
+        ),
+        url("../assets/images/payramid.png") no-repeat center center/cover;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3); // optional overlay
+}
+
+.custom-tabs {
+    position: absolute;
+    bottom: 0; // stick to bottom of image
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    width: 90%;
+    z-index: 2;
+}
+
+.tab-btn {
+    flex: 1;
+    text-align: center; // center text
+    background: #7f94a1;
+    border: none;
+    border-bottom: none; // remove bottom border so it merges with content
+    border-radius: 10px 10px 0 0;
+    padding: 10px 20px;
+    margin: 0 5px;
+    font-weight: 500;
+    padding: 12px 0; // adjust vertical padding
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: #fff;
+
+    font-family: "Roboto", sans-serif;
+    font-weight: 700; // bold
+    font-size: 20px;
+    letter-spacing: 0.01em;
+}
+
+.tab-btn.active {
+    background: #ffa600;
+    color: #fff;
+    border: 1px solid #135699;
+    //   border-color: #007bff;
+}
+
+.tab-content {
+    //   background: #fff;
+    //   border: 1px solid #ddd;
+    //   border-radius: 0 0 10px 10px;
+    //   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.tab-main-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500; // "Medium" in Roboto = weight 500
+    font-size: 30px;
+    line-height: 100%; // same as line-height: 1;
+    letter-spacing: 0; // no extra spacing
+    text-align: center;
+    display: block; // span becomes block-like
+
+    .highlight-1 {
+        color: #135699; // golden for "Piramidele din Gyza"
+        font-weight: 700;
+    }
+
+    .highlight-2 {
+        color: #135699; // blue for "Cairo, Egipt"
+        font-weight: 700;
+    }
+}
+
+.tabs-details {
+    border-radius: 12px;
+    background-color: #faf8ef;
+    padding: 20px;
+}
+
+.tab-content-title {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400; // Regular weight
+    font-size: 24px;
+    line-height: 32px; // spacing between lines
+    letter-spacing: 0; // no extra spacing
+    font-style: normal; // Regular style
+    color: #0f1d2d;
+}
+
+.bullets {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center; // vertical center
+    gap: 15px;
+    margin-top: 20px;
+
+    img {
+        width: 40px; // adjust icon size
+        height: 40px;
+        object-fit: contain;
+    }
+
+    h3 {
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0;
+        color: #3f4a57;
+        margin: 0; // remove default margin that can break vertical alignment
+    }
+}
 
 .detail-container {
     gap: 40px;

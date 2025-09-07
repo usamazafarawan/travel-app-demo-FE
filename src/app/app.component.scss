@@ -99,15 +99,15 @@
                 font-weight: 400; // Regular
                 font-style: normal; // Regular style
             }
-p {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400; // regular weight
-    font-style: normal; // "Regular" = normal
-    font-size: 20px;
-    line-height: 1.2; // 1 or 100%
-    letter-spacing: 0; // reset to default
-}
-}
+            p {
+                font-family: "Roboto", sans-serif;
+                font-weight: 400; // regular weight
+                font-style: normal; // "Regular" = normal
+                font-size: 20px;
+                line-height: 1.2; // 1 or 100%
+                letter-spacing: 0; // reset to default
+            }
+        }
 
         .hero-images {
             display: flex;
@@ -118,7 +118,7 @@ p {
             .image-card {
                 display: flex;
                 flex-direction: column;
-                align-items: center; // center everything horizontally
+                align-items: center;
                 position: relative;
 
                 img.img {
@@ -127,38 +127,57 @@ p {
                     object-fit: cover;
                     border-radius: 10px;
                     margin-bottom: 10px;
-                    border: 1px solid #fff; // default border
+                    border: 1px solid #fff;
                 }
 
                 &.active .img {
-                    border: 2px solid yellow; // active border
+                    border: 2px solid yellow;
                     border-radius: 10px;
                 }
 
+                /* Shared style for controls */
                 .image-control {
-                    margin-top: 5px;
+                    position: absolute;
+                    top: 120px; // push it below the image (100px + margin)
+                    width: 100%;
                     display: flex;
-                    justify-content: center; // center content
-                    align-items: center;
+                }
 
-                    .arrow {
-                        cursor: pointer;
-                        width: 50px;
-                        height: 50px;
-                    }
+                /* First image -> align left */
+                &:nth-child(1) .image-control {
+                    justify-content: flex-start;
+                }
 
-                    .counter {
-                        font-weight: bold;
-                        margin-top: 10px; // small gap below image
-                        background-color: #d6e0e3;
-                        color: black;
-                        padding: 5px 12px; // bigger padding to increase size
-                        border-radius: 8px; // capsule shape
-                        font-size: 14px;
-                        text-align: center;
-                        width: max-content; // hug content
-                        min-width: 40px; // optional minimum width
-                    }
+                /* Second image -> align center */
+                &:nth-child(2) .image-control {
+                    margin-top: 10px;
+                    justify-content: center;
+                }
+
+                /* Third image -> align right */
+                &:nth-child(3) .image-control {
+                    justify-content: flex-end;
+                }
+
+                .arrow {
+                    cursor: pointer;
+                    width: 50px;
+                    height: 50px;
+                }
+
+                .counter {
+                    background-color: #d6e0e3;
+                    color: black;
+                    padding: 3px 10px;
+                    border-radius: 8px;
+                    font-size: 14px;
+                    text-align: center;
+                    width: 66px;
+                    height: 28px;
+
+                    font-size: 16px;
+                    font-family: "Roboto", sans-serif;
+                    font-weight: 600; // SemiBold
                 }
             }
         }

@@ -8,45 +8,56 @@
             <div class="modal-content custom-modal-content">
 
 
-      <div class="hero-section"
-      
-      [ngStyle]="{'background-image': 
-    'linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0) 100%), url(' + heroBg + ')'}"
-    
-    >
-  <!-- Background image -->
-  <div class="overlay"></div>
+                <div class="hero-section" [ngStyle]="{'background-image': 
+    'linear-gradient(to right, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.1) 40%, rgba(0,0,0,0) 100%), url(' + heroBg + ')'}">
+                    <!-- Background image -->
+                    <div class="overlay"></div>
 
-  <!-- Close Icon -->
-  <img class="hero-close" src="../assets/icons/close.png">
+                    <!-- Close Icon -->
+                    <img class="hero-close" src="../assets/icons/close.png">
 
-  <!-- Text and images on left -->
-  <div class="hero-left-content">
-    <div class="hero-text">
-  <h1>Piramidele din Gyza</h1>
+                    <!-- Text and images on left -->
+                    <div class="hero-left-content">
+                        <div class="hero-text">
+                            <h1>{{selectedCity.title}}</h1>
 
-  <div class="info-row">
-    <img src="../assets/icons/location.png">
-    <span>Cairo, Egipt</span>
-  </div>
+                            <div class="info-row" *ngFor="let point of selectedCity.bullets">
+                                <img [src]="point.icon">
+                                <span>{{point.text}}</span>
+                            </div>
 
-  <div class="info-row">
-    <img src="../assets/icons/clock-03.png">
-    <span>Durata vizitei: 5 - 6 ore</span>
-  </div>
+                            <div class="info-row">
+                                <img src="../assets/icons/clock-03.png">
+                                <span>Durata vizitei: 5 - 6 ore</span>
+                            </div>
 
-  <p>Ridicate in urma cu peste 4500 de ani, Piramidele din Gyza raman una dintre cele mai mari enigme ale umanitatii. Constructii grandioase dedicate faraonilor, aceste monumente impresionante combina perfect maretia arhitecturala cu misterul istoriei. Viziteaza cel mai faimos sit antic al Egiptului si paseste intr-o lume plina de legende si descoperiri fascinante.</p>
-</div>
+                            <p>{{selectedCity.description}}</p>
+                        </div>
 
-    <div class="hero-images">
-   <div class="image-card" 
-     *ngFor="let img of images; let i = index" 
-     [class.active]="img.active" 
-     (click)="setActiveImage(i)">
-  <img [src]="img.src" [alt]="img.alt">
-</div>
-    </div>
-  </div>
+                        <div class="hero-images">
+                            <div class="image-card" *ngFor="let img of images; let i = index"
+                                [class.active]="img.active">
+
+                                <img [src]="img.src" [alt]="img.alt" class="img" (click)="setActiveImage(i)">
+
+                                <!-- Conditional controls -->
+                                <div class="image-control" *ngIf="i === 0">
+                                    <img src="../assets/icons/circle-arrow-left.png" class="arrow"
+                                        (click)="prevImage()">
+                                </div>
+
+                                <div class="image-control" *ngIf="i === 1">
+                                    <span class="counter">{{findActiveImageIndex()+1}}/3</span>
+                                </div>
+
+                                <div class="image-control" *ngIf="i === 2">
+                                    <img src="../assets/icons/circle-arrow-right.png" class="arrow"
+                                        (click)="nextImage()">
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Tabs (at bottom edge of image) -->
                     <div class="custom-tabs d-flex justify-content-center">

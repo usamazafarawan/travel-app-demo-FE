@@ -350,4 +350,34 @@
         align-items: center;
         gap: 20px;
     }
+
+    .custom-tabs,
+    .tab-content {
+        display: none !important;
+    }
+
+    .card-header {
+        background-color: #d1e4f6;
+    }
+
+    .card-title-sm {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700; // Bold
+        font-style: normal; // Correct usage
+        font-size: 18px;
+        line-height: 20px;
+        letter-spacing: 1%;
+        color: #0f1d2d;
+    }
+
+    .card-body {
+        background-color: #faf8ef;
+        border: 1px solid #ffc112;
+    }
+}
+
+@media (min-width: 651px) {
+    .small-screen-only {
+        display: none !important;
+    }
 }

@@ -27,25 +27,132 @@
     opacity: 1;
 }
 .hero-section {
-    position: relative;
-    height: 800px;
-    background:
-        linear-gradient(
-            to right,
-            rgba(0, 0, 0, 0.7) 0%,
-            /* dark on left */ rgba(0, 0, 0, 0.1) 40%,
-            /* lighter in middle */ rgba(0, 0, 0, 0) 100% /* transparent (normal image) on right */
-        ),
-        url("../assets/images/payramid.png") no-repeat center center/cover;
-    border-radius: 20px;
-    overflow: hidden;
-}
+  position: relative;
+  height: 800px;
+    background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-start;
 
-.overlay {
+  .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.3); // optional overlay
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .hero-close {
+    position: absolute;
+    top: 50px;
+    right: 25px;
+    // background: rgba(255, 255, 255, 0.2);
+    // color: white;
+    // border: none;
+    // font-size: 28px;
+    cursor: pointer;
+    // border-radius: 50%;
+    // width: 40px;
+    // height: 40px;
+    // line-height: 36px;
+    // text-align: center;
+    // z-index: 10;
+    // transition: background 0.3s;
+
+    // &:hover {
+    //   background: rgba(255, 255, 255, 0.4);
+    // }
+  }
+
+  .hero-left-content {
+    position: relative;
+    z-index: 1;
+    margin-left: 50px;
+    margin-top: 50px;
+    color: white;
+    max-width: 500px;
+
+  .hero-text {
+  margin-bottom: 30px;
+
+  h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+
+  .info-row {
+    display: flex;
+    align-items: center;  // vertically center img + span
+    gap: 20px;            // space between img and text
+    margin-bottom: 15px;  // space between rows
+  }
+
+  img {
+    width: 24px;   // adjust size of icon
+    height: 24px;
+  }
+
+  span {
+    font-size: 18px;
+       font-family: 'Roboto', sans-serif;
+         font-weight: 400;          // Regular
+  font-style: normal;         // Regular style
+  }
+
+  p {
+    font-size: 20px;
+    margin-top: 20px;
+
+     font-family: 'Roboto', sans-serif;
+  font-weight: 400;          // Regular
+  font-style: normal;         // Regular style
+
+  }
 }
+    .hero-images {
+      display: flex;
+      gap: 5px;
+      margin-top: 60px;
+      cursor: pointer;
+      border: 1px;
+
+      .image-card {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        img {
+            
+          width: 100px;
+          height: 100px;
+          object-fit: cover;
+          border-radius: 10px;
+          margin-bottom: 10px;
+        }
+
+          &.active img {
+    border: 2px solid yellow; // active border
+  }
+
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    align-items: center;
+
+    .hero-left-content {
+      margin-left: 0;
+      margin-top: 30px;
+      max-width: 90%;
+
+      .hero-images { justify-content: space-between; }
+    }
+  }
+}
+
 
 .custom-tabs {
     position: absolute;
@@ -381,3 +488,5 @@
         display: none !important;
     }
 }
+
+

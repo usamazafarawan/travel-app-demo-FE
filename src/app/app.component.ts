@@ -53,6 +53,14 @@ export class AppComponent {
     ,
   ];
 
+  images = [
+    { src: '../assets/images/payramid.png', alt: 'Image 1', active: true },
+    { src: '../assets/images/cairo.png', alt: 'Image 2', active: false },
+    { src: '../assets/images/Egipt.png', alt: 'Image 3', active: false },
+  ];
+
+    heroBg: string = '../assets/images/payramid.png'; // default background
+
   setOption(option: string) {
     this.selectedOption = option;
   }
@@ -69,4 +77,10 @@ export class AppComponent {
   toggleCard(card: any) {
     card.open = !card.open; // Toggle open/close
   }
+
+  setActiveImage(index: number) {
+  this.images.forEach((img, i) => img.active = i === index);
+
+    this.heroBg =  this.images[index].src;
+}
 }

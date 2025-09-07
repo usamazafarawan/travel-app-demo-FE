@@ -26,6 +26,7 @@
     border: 1px solid #fff;
     opacity: 1;
 }
+
 .hero-section {
     position: relative;
     height: 800px;
@@ -43,25 +44,26 @@
         background: rgba(0, 0, 0, 0.3);
     }
 
-.hero-close-wrapper {
-  position: absolute;
-  top: 50px;
-  right: 25px;
-  display: flex;
-  gap: 20px; // space between close and new image
-  z-index: 10;
-  align-items: flex-start; // align to bottom
+    .hero-close-wrapper {
+        position: absolute;
+        top: 50px;
+        right: 25px;
+        display: flex;
+        gap: 20px; // space between close and new image
+        z-index: 10;
+        align-items: flex-start; // align to bottom
 
-  .hero-close{
-    cursor: pointer;
-  }
-  .hero-info {
-    border: 2px solid #fff;
-    border-radius: 20px;
-    width: 200px;   // adjust size
-    height: 200px;
-  }
-}
+        .hero-close {
+            cursor: pointer;
+        }
+
+        .hero-info {
+            border: 2px solid #fff;
+            border-radius: 20px;
+            width: 200px; // adjust size
+            height: 200px;
+        }
+    }
 
     .hero-left-content {
         position: relative;
@@ -107,6 +109,7 @@
                 font-style: normal; // Regular style
             }
         }
+
         .hero-images {
             display: flex;
             gap: 20px; // space between images
@@ -126,6 +129,7 @@
                     border-radius: 10px;
                     margin-bottom: 10px;
                 }
+
                 &.active .img {
                     border: 2px solid yellow; // active border
                     border-radius: 10px;
@@ -410,6 +414,7 @@
                 border-radius: 16px;
                 cursor: pointer;
                 transition: all 0.3s ease;
+
                 .text-content-travel {
                     display: flex;
                     flex-direction: column;
@@ -440,6 +445,7 @@
                     margin-left: 10px;
                 }
             }
+
             .travel-box.active {
                 border-color: #007bff;
                 background-color: #e6f0ff;
@@ -483,6 +489,10 @@
 
     .custom-tabs,
     .tab-content {
+        display: none !important;
+    }
+
+    .hero-info {
         display: none !important;
     }
 

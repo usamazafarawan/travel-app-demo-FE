@@ -22,10 +22,7 @@ export class AppComponent {
         { icon: '../assets/icons/currency.png', text: 'Moneda: Lira Egipteana (EGP)' },
         { icon: '../assets/icons/clock.png', text: 'Fus orar: UTC+02:00' }
       ]
-    }
-    ,
-
-    {
+    }, {
       title: 'Transport Public',
       open: false,
       contentTitle: 'Informatii utile despre Cairo, Transport public',
@@ -36,8 +33,7 @@ export class AppComponent {
         { icon: '../assets/icons/currency.png', text: 'Moneda: Lira Egipteana (EGP)' },
         { icon: '../assets/icons/clock.png', text: 'Fus orar: UTC+02:00' }
       ]
-    }
-    ,
+    } ,
     {
       title: 'Bucatarie Locala ',
       open: false,
@@ -70,7 +66,6 @@ export class AppComponent {
           text: 'Durata vizitei: 5 - 6 ore'
         }
       ]
-
     },
     {
       src: '../assets/images/cairo.png', alt: 'Image 2', active: false,
@@ -88,19 +83,12 @@ export class AppComponent {
           text: 'Clima desertica, verile extrem de calde, iernile blande.'
         }
       ]
-
-
-
-
     },
     {
       src: '../assets/images/Egipt.png', alt: 'Image 3', active: false,
-
-
-
       title: 'Egipt',
       description: 'Egiptul este situat in nord-estul Africii si este strabatut de fluviul Nil, sursa vietii de-a lungul mileniilor. Renumit pentru civilizatia sa antica, tara adaposteste comori legendare precum Piramidele, Valea Regilor si templele de la Luxor. De la deserturile spectaculoase si Marea Rosie pana la siturile arheologice unice si orasele pline de energie, Egiptul imbina traditia si modernitatea intr-o destinatie fascinanta pentru orice calator.',
-      mapImage:'../assets/images/map.png',
+      mapImage: '../assets/images/map.png',
       bullets: [
         {
           icon: '../assets/icons/earth-globe.png',
@@ -112,12 +100,9 @@ export class AppComponent {
           text: '118,6 milioane de locuitori'
         }
       ]
-
-
     },
   ];
   selectedCity = this.images[0];
-
   heroBg: string = '../assets/images/payramid.png'; // default background
 
   setOption(option: string) {
@@ -141,7 +126,7 @@ export class AppComponent {
     this.images.forEach((img, i) => img.active = i === index);
 
     this.heroBg = this.images[index].src;
-    this.selectedCity =  this.images[index]
+    this.selectedCity = this.images[index]
   }
 
   findActiveImageIndex() {

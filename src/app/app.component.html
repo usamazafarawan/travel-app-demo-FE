@@ -14,10 +14,10 @@
                     <div class="overlay"></div>
 
                     <!-- Close Icon -->
-<div class="hero-close-wrapper">
-        <img *ngIf="selectedCity?.mapImage" class="hero-info" [src]="selectedCity.mapImage" alt="Info">
-    <img  class="hero-close" src="../assets/icons/close.png" alt="Close">
-</div>
+                    <div class="hero-close-wrapper">
+                        <img *ngIf="selectedCity?.mapImage" class="hero-info" [src]="selectedCity.mapImage" alt="Info">
+                        <img class="hero-close" src="../assets/icons/close.png" alt="Close">
+                    </div>
                     <!-- Text and images on left -->
                     <div class="hero-left-content">
                         <div class="hero-text">
@@ -26,11 +26,6 @@
                             <div class="info-row" *ngFor="let point of selectedCity.bullets">
                                 <img [src]="point.icon">
                                 <span>{{point.text}}</span>
-                            </div>
-
-                            <div class="info-row">
-                                <img src="../assets/icons/clock-03.png">
-                                <span>Durata vizitei: 5 - 6 ore</span>
                             </div>
 
                             <p>{{selectedCity.description}}</p>
@@ -173,10 +168,8 @@
                                 <img src="../assets/icons/clock.png" alt="">
                                 <h3>Fus orar: &nbsp; UTC+02:00</h3>
                             </div>
-
                         </div>
                     </div>
-
                 </div>
 
                 <div class="container mt-4 small-screen-only">
@@ -193,11 +186,6 @@
                                 <img [src]="bullet.icon" alt="">
                                 <h3>{{bullet.text}}</h3>
                             </div>
-
-
-
-
-
                         </div>
                     </div>
 
